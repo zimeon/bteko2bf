@@ -1,0 +1,7 @@
+*~
+# Workspace
+tmp/
+target/
+# Other repos used
+bib2lod/
+marc2bibframe/
