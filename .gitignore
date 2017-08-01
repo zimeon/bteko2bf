@@ -2,6 +2,6 @@
 # Workspace
 tmp/
 target/
-# Other repos used
-bib2lod/
-marc2bibframe/
+# Other repos that we might check out locally
+/bib2lod/
+/marc2bibframe/

@@ -16,6 +16,7 @@ To rebuild code/data here, from the `bteko2bf` directory, check out, build and c
 
 ```
 git clone git@github.com:ld4l-labs/bib2lod.git
+cd bib2lod
 mvn install
 cd ..
 cp bib2lod/target/bib2lod.jar vendor/bib2lod/
