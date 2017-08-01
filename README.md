@@ -87,20 +87,19 @@ We note there are a couple of additions here in the `bflc` namespace that are
 ### Converting MARC -> bibliotek-o
 
 ```
-> java -jar vendor/bib2lod/bib2lod.jar -c vendor/bib2lod/config.json; rapper -i ntriples -o turtle -f xmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\" -f xmlns:bf=\"http://id.loc.gov/ontologies/bibframe/\" -f xmlns:bib=\"http://bibliotek-o.org/ontology/\" -f xmlns:dct=\"http://purl.org/dc/terms/\" -f xmlns:vivo=\"http://vivoweb.org/ontology/core#\" tmp/102063.min.nt http://data.ld4l.org/cornell/ > tmp/102063-bteko.ttl
- 
-11:59:34.640 INFO  org.ld4l.bib2lod.managers.SimpleManager line 39 - START CONVERSION.
-11:59:38.434 INFO  org.ld4l.bib2lod.managers.SimpleManager line 44 - END CONVERSION.
-rapper: Parsing URI file:///Users/simeon/src/bteko2bf/tmp/102063.min.nt with parser ntriples
-rapper: Serializing with serializer turtle
+> java -jar vendor/bib2lod/bib2lod.jar -c vendor/bib2lod/config.json; rapper -i turtle -o turtle -f xmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\" -f xmlns:bf=\"http://id.loc.gov/ontologies/bibframe/\" -f xmlns:bib=\"http://bibliotek-o.org/ontology/\" -f xmlns:dct=\"http://purl.org/dc/terms/\" -f xmlns:vivo=\"http://vivoweb.org/ontology/core#\" tmp/102063.min.ttl http://example.org/ > tmp/102063-bteko.ttl
+15:14:06.093 INFO  org.ld4l.bib2lod.managers.SimpleManager line 39 - START CONVERSION.
+15:14:06.793 INFO  org.ld4l.bib2lod.managers.SimpleManager line 44 - END CONVERSION.
+rapper: Parsing URI file:///Users/simeon/src/bteko2bf/tmp/102063.min.ttl with parser turtle and base URI http://example.org/
+rapper: Serializing with serializer turtle and base URI http://example.org/
 rapper: Parsing returned 31 triples
 ```
 
 Which produces:
 
 ```
-> more tmp/102063-bteko.ttl 
-@base <http://data.ld4l.org/cornell/> .
+> more tmp/102063-bteko.ttl
+@base <http://example.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
@@ -108,55 +107,55 @@ Which produces:
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix vivo: <http://vivoweb.org/ontology/core#> .
 
-<n1a2af2499c92d41c>
+<n49bd4013c951e3fe>
+    dct:hasPart <n940b179f7c128f51> ;
+    a bf:Title ;
+    rdf:value "Clinical cardiopulmonary physiology." .
+
+<n4ddfc97a89c72d82>
+    bib:hasPreferredTitle <na6d6b62a64809d48> ;
+    dct:language <http://id.loc.gov/vocabulary/languages/eng> ;
+    a bf:Text, bf:Work .
+
+<n7b454d8a8ce9e261>
+    a bf:Local ;
+    rdf:value "102063" .
+
+<n84cafe41bcd09ce6>
     vivo:rank "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
     a bib:MainTitleElement ;
     rdf:value "Clinical cardiopulmonary physiology." .
 
-<n386b4c790e19f0e8>
-    dct:hasPart <n1a2af2499c92d41c> ;
+<n851e67e62c11def2>
+    a bf:Item .
+
+<n940b179f7c128f51>
+    vivo:rank "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+    a bib:MainTitleElement ;
+    rdf:value "Clinical cardiopulmonary physiology." .
+
+<na6d6b62a64809d48>
+    dct:hasPart <n84cafe41bcd09ce6> ;
     a bf:Title ;
     rdf:value "Clinical cardiopulmonary physiology." .
 
-<n445f05d5e9165831>
-    bf:identifiedBy <n73205fbd2e8a1764> ;
-    a bf:AdminMetadata .
-
-<n73205fbd2e8a1764>
-    a bf:Local ;
-    rdf:value "102063" .
-
-<n73437ac2c628886b>
-    a bf:Item .
-
-<n789f010491428529>
-    bib:hasActivity <n865aa7ec7d9a9f58> ;
-    bib:hasPreferredTitle <nd95e57b81fac7218> ;
-    bf:adminMetadata <n445f05d5e9165831> ;
-    bf:hasItem <n73437ac2c628886b> ;
-    bf:instanceOf <na6fd58b8eb1c1551> ;
-    a bf:Instance .
-
-<n865aa7ec7d9a9f58>
+<ndc2c85f4ef4ecb09>
     bib:atLocation <http://id.loc.gov/vocabulary/countries/nyu> ;
     dct:date "1957" ;
     a bib:PublisherActivity ;
     rdfs:label "Publishing" .
 
-<na6fd58b8eb1c1551>
-    bib:hasPreferredTitle <n386b4c790e19f0e8> ;
-    dct:language <http://id.loc.gov/vocabulary/languages/eng> ;
-    a bf:Text, bf:Work .
+<ne04f254e09dd485f>
+    bf:identifiedBy <n7b454d8a8ce9e261> ;
+    a bf:AdminMetadata .
 
-<nb952b1aee2ec439>
-    vivo:rank "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
-    a bib:MainTitleElement ;
-    rdf:value "Clinical cardiopulmonary physiology." .
-
-<nd95e57b81fac7218>
-    dct:hasPart <nb952b1aee2ec439> ;
-    a bf:Title ;
-    rdf:value "Clinical cardiopulmonary physiology." .
+<nf543a03c69fb4af6>
+    bib:hasActivity <ndc2c85f4ef4ecb09> ;
+    bib:hasPreferredTitle <n49bd4013c951e3fe> ;
+    bf:adminMetadata <ne04f254e09dd485f> ;
+    bf:hasItem <n851e67e62c11def2> ;
+    bf:instanceOf <n4ddfc97a89c72d82> ;
+    a bf:Instance .
 
 ```
 

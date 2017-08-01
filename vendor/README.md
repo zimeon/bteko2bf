@@ -22,3 +22,5 @@ cd ..
 cp bib2lod/target/bib2lod.jar vendor/bib2lod/
 cp bib2lod/test-data/marcxml-to-biblioteko/cornell/minimal-record/102063.min.xml vendor/bib2lod/
 ```
+
+Also have modified version of `bib2lod/test-data/marcxml-to-biblioteko/config.json` as `vendor/bib2lod/config.json`.
