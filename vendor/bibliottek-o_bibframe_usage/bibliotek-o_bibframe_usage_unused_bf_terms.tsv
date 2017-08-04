@@ -1,0 +1,114 @@
+Type	Term	ReplacedTerm (if singular)	Relevant Pattern Doc	Related / Contextual Terms	
+Class	http://id.loc.gov/ontologies/bibframe/AbbreviatedTitle		Title		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/absorbed	rdau:P60574	Relations		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/absorbedBy	rdau:P60247	Relations		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/acquisitionSource	bib:hasSource	Activities	bib:AcquisitionActivity |bib:OfferActivitiy	
+Class	http://id.loc.gov/ontologies/bibframe/AcquisitionSource		Activities	bib:AcquisitionActivity |bib:OfferActivitiy	
+DatatypeProperty	http://id.loc.gov/ontologies/bibframe/acquisitionTerms		Activities	bib:AcquisitionActivity |bib:OfferActivitiy	
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/agent	bib:hasAgent			
+Class	http://id.loc.gov/ontologies/bibframe/Agent	foaf:Agent			
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/barcode	bf:identifiedBy			
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/capture	bib:hasActivity	Activities		
+Class	http://id.loc.gov/ontologies/bibframe/Capture	bib:CaptureActivity	Activities		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/carrier		Content/Carrier/Media		
+Class	http://id.loc.gov/ontologies/bibframe/Carrier		Content/Carrier/Media		
+Class	http://id.loc.gov/ontologies/bibframe/CollectiveTitle		Title		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/content		Content/Carrier/Media		
+Class	http://id.loc.gov/ontologies/bibframe/Content		Content/Carrier/Media		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/continuedBy	rdau:P60306	Relations		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/continuedInPartBy	rdau:P60199	Relations		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/continues	rdau:P60102	Relations		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/continuesInPart	rdau:P60277	Relations		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/contribution	bib:hasActivity	Activities		
+Class	http://id.loc.gov/ontologies/bibframe/Contribution	bib:ContributorActivity	Activities		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/contributor	foaf:Agent	Activities		
+DatatypeProperty	http://id.loc.gov/ontologies/bibframe/copyrightDate	dcterms:date	Activities	bib:CopyrightHolderActivity	
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/coverArt	bib:hasCoverArt			
+Class	http://id.loc.gov/ontologies/bibframe/CoverArt	bf:Work			
+DatatypeProperty	http://id.loc.gov/ontologies/bibframe/credits	bib:listingCredits	Notes & Annotations	http://www.w3.org/ns/oa#Motivation	
+DatatypeProperty	http://id.loc.gov/ontologies/bibframe/custodialHistory	bib:specifyingCustodialHistory	Notes & Annotations	http://www.w3.org/ns/oa#Motivation	
+DatatypeProperty	http://id.loc.gov/ontologies/bibframe/date	dcterms:date			
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/derivativeOf	rdau:P60305	Relations		
+Class	http://id.loc.gov/ontologies/bibframe/Distribution	bib:DistributorActivity	Activities		
+Class	http://id.loc.gov/ontologies/bibframe/Event	schema:Event			
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/eventContent				
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/eventContentOf				
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/geographicCoverage	bib:covers			
+Class	http://id.loc.gov/ontologies/bibframe/GeographicCoverage	prov:Location			
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/grantingInstitution	bib:grantedBy			
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/hasDerivative	rdau:P60250	Relations		
+SymmetricProperty	http://id.loc.gov/ontologies/bibframe/hasEquivalent	rdau:P60191	Relations		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/hasPart	dcterms:hasPart	Relations		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/hasReproduction	rdau:P60272	Relations		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/heldBy	bib:heldBy			
+DatatypeProperty	http://id.loc.gov/ontologies/bibframe/historyOfWork	bib:specifyingHistoryOfWork	Notes & Annotations	http://www.w3.org/ns/oa#Motivation	
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/immediateAcquisition	bib:hasActivity	Activities	bib:AcquisitionActivity |bib:OfferActivitiy	
+Class	http://id.loc.gov/ontologies/bibframe/ImmediateAcquisition		Activities	bib:AcquisitionActivity |bib:OfferActivitiy	
+Class	http://id.loc.gov/ontologies/bibframe/InstanceTitle	bf:Title	Title	bf:Instance	
+Class	http://id.loc.gov/ontologies/bibframe/KeyTitle	bib:KeyTitle	Title		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/language	dcterms:language			
+Class	http://id.loc.gov/ontologies/bibframe/Language	lingvoj:Lingvo			
+DatatypeProperty	http://id.loc.gov/ontologies/bibframe/legalDate	dcterms:date		Do we have or want a legal/law subClass of Work?	
+DatatypeProperty	http://id.loc.gov/ontologies/bibframe/mainTitle	bib:MainTitleElement	Title		
+Class	http://id.loc.gov/ontologies/bibframe/Manufacture	bib:ManufacturerActivity	Activities		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/media		Content/Carrier/Media		
+Class	http://id.loc.gov/ontologies/bibframe/Media		Content/Carrier/Media		
+Class	http://id.loc.gov/ontologies/bibframe/Meeting	bib:Meeting			
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/mergedToForm	rdau:60504	Relations		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/mergerOf	rdau:60505	Relations		
+Class	http://id.loc.gov/ontologies/bibframe/Multimedia	bib:Software			
+DatatypeProperty	http://id.loc.gov/ontologies/bibframe/natureOfContent	bib:specifyingNatureOfContent	Notes & Annotations	http://www.w3.org/ns/oa#Motivation	
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/note	bib:isTargetOf	Notes & Annotations		
+Class	http://id.loc.gov/ontologies/bibframe/Note	oa:Annotation	Notes & Annotations		
+DatatypeProperty	http://id.loc.gov/ontologies/bibframe/noteType	oa:motiviedBy	Notes & Annotations		
+Class	http://id.loc.gov/ontologies/bibframe/Organization	foaf:Organization			
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/originalVersion	rdau:60120	Relations		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/originalVersionOf	rdau:60305	Relations		
+DatatypeProperty	http://id.loc.gov/ontologies/bibframe/originDate	dcterms:date	Activities	bib:CreatorActivity	
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/originPlace	bib:atLocation	Activities	bib:CreatorActivity	
+SymmetricProperty	http://id.loc.gov/ontologies/bibframe/otherPhysicalFormat	rdau:	Relations		
+Class	http://id.loc.gov/ontologies/bibframe/ParallelTitle	bib:ParallelTitle	Title		
+DatatypeProperty	http://id.loc.gov/ontologies/bibframe/part	dcterms:hasPart	Title	bib:TitleElement	
+DatatypeProperty	http://id.loc.gov/ontologies/bibframe/partName		Title	bib:TitleElement	
+DatatypeProperty	http://id.loc.gov/ontologies/bibframe/partNumber	vivo:rank	Title		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/partOf	dcterms:isPartOf			
+Class	http://id.loc.gov/ontologies/bibframe/Person	foaf:Person			
+DatatypeProperty	http://id.loc.gov/ontologies/bibframe/physicalLocation	bib:atLocation			
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/place	bib:atLocation			
+Class	http://id.loc.gov/ontologies/bibframe/Place	prov:Location			
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/precededBy	rdau:P60261	Relations		
+DatatypeProperty	http://id.loc.gov/ontologies/bibframe/preferredCitation	bib:specifyingPreferredCitation	Notes & Annotations	http://www.w3.org/ns/oa#Motivation	
+Class	http://id.loc.gov/ontologies/bibframe/Production	bib:ProductionActivity	Activities		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/provisionActivity	bib:hasActivity	Activities		
+Class	http://id.loc.gov/ontologies/bibframe/ProvisionActivity		Activities		
+DatatypeProperty	http://id.loc.gov/ontologies/bibframe/provisionActivityStatement	bib:provisionActivityStatement	Notes & Annotations	http://www.w3.org/ns/oa#Motivation	
+Class	http://id.loc.gov/ontologies/bibframe/Publication	bib:PublisherActivity	Activities		
+DatatypeProperty	http://id.loc.gov/ontologies/bibframe/qualifier				
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/replacedBy	rdau:P60104	Relations		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/replacementOf	rdau:P60278	Relations		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/reproductionOf	rdau:P60297	Relations		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/review	bib:reviewing	Notes & Annotations	http://www.w3.org/ns/oa#Motivation	Also -- ReviewerActivitity?
+Class	http://id.loc.gov/ontologies/bibframe/Review		Notes & Annotations	http://www.w3.org/ns/oa#Motivation	Also -- ReviewerActivitity?
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/role		Activities		
+Class	http://id.loc.gov/ontologies/bibframe/Role		Activities		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/separatedFrom	rdau:P60277	Relations		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/shelfMark	bf:identifiedBy			
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/source	bf:hasSource			
+Class	http://id.loc.gov/ontologies/bibframe/Source	bf:Work			
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/splitInto	rdau:P60503	Relations		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/subject	dcterms:subject			
+DatatypeProperty	http://id.loc.gov/ontologies/bibframe/subtitle	dcterms:hasPart	Title	bib:SubtitleElement	
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/succeededBy	rdau:P60278	Relations		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/summary	bib:summarizing	Notes & Annotations	http://www.w3.org/ns/oa#Motivation	
+Class	http://id.loc.gov/ontologies/bibframe/Summary		Notes & Annotations	http://www.w3.org/ns/oa#Motivation	
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/tableOfContents	bib:linkingTableOfContents	Notes & Annotations	http://www.w3.org/ns/oa#Motivation	
+Class	http://id.loc.gov/ontologies/bibframe/TableOfContents		Notes & Annotations	http://www.w3.org/ns/oa#Motivation	
+Class	http://id.loc.gov/ontologies/bibframe/Tactile	bib:Tactile			
+DatatypeProperty	http://id.loc.gov/ontologies/bibframe/temporalCoverage	bib:covers			
+Class	http://id.loc.gov/ontologies/bibframe/Topic				
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/translation	rdau:P60280	Relations		
+ObjectProperty	http://id.loc.gov/ontologies/bibframe/translationOf	rdau:P60244	Relations		
+Class	http://id.loc.gov/ontologies/bibframe/VariantTitle	bf:Title	Title		
+DatatypeProperty	http://id.loc.gov/ontologies/bibframe/variantType	bf:title	Title		
+DatatypeProperty	http://id.loc.gov/ontologies/bibframe/version				
+Class	http://id.loc.gov/ontologies/bibframe/WorkTitle	bf:Title	Title	bf:Work	

@@ -24,3 +24,7 @@ cp bib2lod/test-data/marcxml-to-biblioteko/cornell/minimal-record/102063.min.xml
 ```
 
 Also have modified version of `bib2lod/test-data/marcxml-to-biblioteko/config.json` as `vendor/bib2lod/config.json`.
+
+## bibliotek-o_bibframe_usage
+
+Data from spreadsheet `bibliotek-o_bibframe_usage.xlsx` -- currently a work in progress that will be updated and then published.
