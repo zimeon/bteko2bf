@@ -3,6 +3,11 @@ python:
   - "3.4"
   - "3.5"
   - "3.6"
+before_install:
+  - export FUSEKI_HOME=apache-jena-fuseki-3.4.0
+  - wget http://www.apache.org/dist/jena/binaries/$FUSEKI_HOME.tar.gz
+  - tar xzf $FUSEKI_HOME.tar.gz
+  - export PATH=$PATH:$PWD/$FUSEKI_HOME:$PWD/$FUSEKI_HOME/bin
 install:
   - pip install coveralls pep8 pep257
 script:
