@@ -8,4 +8,4 @@ install:
 script:
   - pep8 --ignore=E501 *.py
   - pep257 *.py
-  - run test-bteko2bf-sparql.py
+  - python test-bteko2bf-sparql.py
