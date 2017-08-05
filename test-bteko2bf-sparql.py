@@ -26,7 +26,7 @@ class TestAll(unittest.TestCase):
         cls.proc = Popen(['fuseki-server', '--update', '--mem',
                           '--localhost', '/dataset'])
         print("Started fuseki (pid=%d)" % (cls.proc.pid))
-        time.sleep(4)
+        time.sleep(10)
 
     @classmethod
     def _stop_fuseki(cls):
