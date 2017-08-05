@@ -1,5 +1,22 @@
 # Experiments/thoughts for bibliotek-o to BIBFRAME conversion
 
+## Idea...
+
+Bibliotek-o to BIBFRAME is an RDF to RDF conversion where a significant portion of the data will remain the same (things in the `bf:` namespace). It thus seems that SPARQL [`UPDATE`](https://www.w3.org/TR/sparql11-update/#deleteInsert) to delete bibliotek-o triples and replace them with BIBFRAME?
+
+## Building the conversion
+
+The Python `make-bteko2bf-sparql.py` program is designed to write a SPARQL UPDATE script `bteko2bf.ru`. Generate with:
+
+```
+> python make-bteko2bf-sparql.py -v
+INFO:root:Done, written 90 mappings to bteko2bf.ru
+```
+
+## Running the conversion
+
+**NEED TO FIND A PURE COMMAND LINE WAY TO DO THIS** -- currently it seems to work OK with a [Fuseki triplestore server](README_fuseki.md) but this seems rather inconvenient and wasteful in terms of startup time.
+
 ## Setup
 
 The `vendor` directory include a JAR of [`bib2lod`](https://github.com/ld4l-labs/bib2lod) which does MARCXML to bibliotek-o conversion.

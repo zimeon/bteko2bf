@@ -1,8 +1,12 @@
 *~
 output.ttl
+test_bf_output.ttl
 # Workspace
 /tmp/102*
 target/
+.cache
+.coverage
+__pycache__
 # Other repos that we might check out locally
 /bib2lod/
 /marc2bibframe/
