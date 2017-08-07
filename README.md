@@ -2,7 +2,7 @@
 
 ## Idea...
 
-Bibliotek-o to BIBFRAME is a lossy RDF to RDF conversion where a significant portion of the data will remain the same (things in the `bf:` namespace). It thus seems that SPARQL [`UPDATE`](https://www.w3.org/TR/sparql11-update/#deleteInsert) to delete bibliotek-o triples and replace them with BIBFRAME equivalent would be a good approach?
+Bibliotek-o to BIBFRAME is a lossy RDF to RDF conversion where a significant portion of the data will remain the same (things in the `bf:` namespace). It thus seems that [SPARQL UPDATE](https://www.w3.org/TR/sparql11-update/#deleteInsert) to delete bibliotek-o triples and replace them with BIBFRAME equivalent would be a good approach?
 
 The conversion is lossy because bibliotek-o is more expressive than BIBFRAME.
 
@@ -17,9 +17,20 @@ INFO:root:Done, written 90 mappings to bteko2bf.ru
 
 ## Running the conversion
 
+Assuming the SPARQL UPDATE code is `bteko2bf.ru`, one can run it on a bibliotek-o file `testdata/ex_listingCredits_1_bteko.ttl` with:
+
+```
+> update --dump --data=testdata/ex_listingCredits_1_bteko.ttl --update=bteko2bf.ru
+<http://example.org/obj1> <http://id.loc.gov/ontologies/bibframe/credits> "Credit" .
+```
+
+the output BIBFRAME is written to STDOUT (just one triple in this example).
+
+See <README_update.md> for notes on running SPARQL UPDATE without a server; <README_fuseki.md> for note running against a Fuseki server.
+
 **NEED TO FIND A PURE COMMAND LINE WAY TO DO THIS** -- currently it seems to work OK with a [Fuseki triplestore server](README_fuseki.md) but this seems rather inconvenient and wasteful in terms of startup time.
 
-SPARQL UPDATE code is `bteko2bf.ru`
+
 
 ## Tests
 

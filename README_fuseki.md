@@ -1,5 +1,7 @@
 # SPARQL UPDATE using a Fuseki server
 
+See <README_update.md> for how to do an update on the command line without starting a Fuseki server.
+
 ## Installation
 
 On OSX Jena Fuseki can be installed with:
