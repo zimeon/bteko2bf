@@ -30,13 +30,13 @@ See for notes on running [SPARQL UPDATE as a command-line tool](README_update.md
 
 ## Tests
 
+The program `test-bteko2bf-sparql.py` uses the Python `unittest` framework to run tests against all examples `*_bteko.ttl` -> `*_bf.ttl` in the [`testdata`](testdata) directory. Run with:
+
 ```
 > python test-bteko2bf-sparql.py 
-Started fuseki (pid=25153)
-[2017-08-04 22:14:53] Server     INFO  Dataset: in-memory
-...snip...
+.
 ----------------------------------------------------------------------
-Ran 1 test in 15.064s
+Ran 1 test in 3.018s
 
 OK
 ```
