@@ -202,6 +202,7 @@ def write_documentation(fh, mappings):
             fh.write("<tr>\n<td><pre>%s</pre></td>\n" % (html.escape(examples[j][0])))
             fh.write("<td><pre>%s</pre></td>\n</tr>\n" % (html.escape(examples[j][1])))
             fh.write("</table>\n\n")
+    fh.write("</body>\n</html>\n")
 
 
 if __name__ == '__main__':
