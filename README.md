@@ -8,10 +8,10 @@ The conversion is lossy because bibliotek-o is more expressive than BIBFRAME.
 
 ## Building the conversion
 
-The Python `make-bteko2bf-sparql.py` program is designed to write a SPARQL UPDATE script `bteko2bf.ru` based on data from bibliotek-o to BIBFRAME mappings. Generate with:
+The Python `make_bteko2bf_sparql.py` program is designed to write a SPARQL UPDATE script `bteko2bf.ru` based on data from [bibliotek-o to BIBFRAME mappings](#bibliotek-o-to-bibframe-mappings). Generate with:
 
 ```
-> python make-bteko2bf-sparql.py -v
+> python make_bteko2bf_sparql.py -v
 INFO:root:Done, written 90 mappings to bteko2bf.ru
 ```
 
@@ -30,10 +30,10 @@ See for notes on running [SPARQL UPDATE as a command-line tool](README_update.md
 
 ## Tests
 
-The program `test-bteko2bf-sparql.py` uses the Python `unittest` framework to run tests against all examples `*_bteko.ttl` -> `*_bf.ttl` in the [`testdata`](testdata) directory. Run with:
+The program `test_bteko2bf_sparql.py` uses the Python `unittest` framework to run tests against all examples `*_bteko.ttl` -> `*_bf.ttl` in the [`testdata`](testdata) directory. Run with:
 
 ```
-> python test-bteko2bf-sparql.py 
+> python test_bteko2bf_sparql.py 
 .
 ----------------------------------------------------------------------
 Ran 1 test in 3.018s
