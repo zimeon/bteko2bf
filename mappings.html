@@ -1,0 +1,359 @@
+<html>
+<body>
+<h1>Bibliotek-o to BIBFRAME conversion documentation</h1>
+
+<h2>Index by terms</h2>
+
+<table>
+<tr><td>BIBFRAME terms</td><td>Bibliotek-o terms</td></tr>
+<tr><td><a href="#bf_AbbreviatedTitle">bf:AbbreviatedTitle</a></td><td><a href="#bf_Title">bf:Title</a></td></tr>
+<tr><td><a href="#bf_AcquisitionSource">bf:AcquisitionSource</a></td><td><a href="#bf_Work">bf:Work</a></td></tr>
+<tr><td><a href="#bf_Agent">bf:Agent</a></td><td><a href="#bf_hasSource">bf:hasSource</a></td></tr>
+<tr><td><a href="#bf_Capture">bf:Capture</a></td><td><a href="#bf_identifiedBy">bf:identifiedBy</a></td></tr>
+<tr><td><a href="#bf_Carrier">bf:Carrier</a></td><td><a href="#bf_title">bf:title</a></td></tr>
+<tr><td><a href="#bf_CollectiveTitle">bf:CollectiveTitle</a></td><td><a href="#bib_CaptureActivity">bib:CaptureActivity</a></td></tr>
+<tr><td><a href="#bf_Content">bf:Content</a></td><td><a href="#bib_ContributorActivity">bib:ContributorActivity</a></td></tr>
+<tr><td><a href="#bf_Contribution">bf:Contribution</a></td><td><a href="#bib_DistributorActivity">bib:DistributorActivity</a></td></tr>
+<tr><td><a href="#bf_CoverArt">bf:CoverArt</a></td><td><a href="#bib_KeyTitle">bib:KeyTitle</a></td></tr>
+<tr><td><a href="#bf_Distribution">bf:Distribution</a></td><td><a href="#bib_MainTitleElement">bib:MainTitleElement</a></td></tr>
+<tr><td><a href="#bf_Event">bf:Event</a></td><td><a href="#bib_ManufacturerActivity">bib:ManufacturerActivity</a></td></tr>
+<tr><td><a href="#bf_GeographicCoverage">bf:GeographicCoverage</a></td><td><a href="#bib_Meeting">bib:Meeting</a></td></tr>
+<tr><td><a href="#bf_ImmediateAcquisition">bf:ImmediateAcquisition</a></td><td><a href="#bib_ParallelTitle">bib:ParallelTitle</a></td></tr>
+<tr><td><a href="#bf_InstanceTitle">bf:InstanceTitle</a></td><td><a href="#bib_ProductionActivity">bib:ProductionActivity</a></td></tr>
+<tr><td><a href="#bf_KeyTitle">bf:KeyTitle</a></td><td><a href="#bib_PublisherActivity">bib:PublisherActivity</a></td></tr>
+<tr><td><a href="#bf_Language">bf:Language</a></td><td><a href="#bib_Software">bib:Software</a></td></tr>
+<tr><td><a href="#bf_Manufacture">bf:Manufacture</a></td><td><a href="#bib_Tactile">bib:Tactile</a></td></tr>
+<tr><td><a href="#bf_Media">bf:Media</a></td><td><a href="#bib_atLocation">bib:atLocation</a></td></tr>
+<tr><td><a href="#bf_Meeting">bf:Meeting</a></td><td><a href="#bib_covers">bib:covers</a></td></tr>
+<tr><td><a href="#bf_Multimedia">bf:Multimedia</a></td><td><a href="#bib_grantedBy">bib:grantedBy</a></td></tr>
+<tr><td><a href="#bf_Note">bf:Note</a></td><td><a href="#bib_hasActivity">bib:hasActivity</a></td></tr>
+<tr><td><a href="#bf_Organization">bf:Organization</a></td><td><a href="#bib_hasAgent">bib:hasAgent</a></td></tr>
+<tr><td><a href="#bf_ParallelTitle">bf:ParallelTitle</a></td><td><a href="#bib_hasCoverArt">bib:hasCoverArt</a></td></tr>
+<tr><td><a href="#bf_Person">bf:Person</a></td><td><a href="#bib_hasSource">bib:hasSource</a></td></tr>
+<tr><td><a href="#bf_Place">bf:Place</a></td><td><a href="#bib_heldBy">bib:heldBy</a></td></tr>
+<tr><td><a href="#bf_Production">bf:Production</a></td><td><a href="#bib_isTargetOf">bib:isTargetOf</a></td></tr>
+<tr><td><a href="#bf_ProvisionActivity">bf:ProvisionActivity</a></td><td><a href="#bib_linkingTableOfContents">bib:linkingTableOfContents</a></td></tr>
+<tr><td><a href="#bf_Publication">bf:Publication</a></td><td><a href="#bib_listingCredits">bib:listingCredits</a></td></tr>
+<tr><td><a href="#bf_Review">bf:Review</a></td><td><a href="#bib_provisionActivityStatement">bib:provisionActivityStatement</a></td></tr>
+<tr><td><a href="#bf_Role">bf:Role</a></td><td><a href="#bib_reviewing">bib:reviewing</a></td></tr>
+<tr><td><a href="#bf_Source">bf:Source</a></td><td><a href="#bib_specifyingCustodialHistory">bib:specifyingCustodialHistory</a></td></tr>
+<tr><td><a href="#bf_Summary">bf:Summary</a></td><td><a href="#bib_specifyingHistoryOfWork">bib:specifyingHistoryOfWork</a></td></tr>
+<tr><td><a href="#bf_TableOfContents">bf:TableOfContents</a></td><td><a href="#bib_specifyingNatureOfContent">bib:specifyingNatureOfContent</a></td></tr>
+<tr><td><a href="#bf_Tactile">bf:Tactile</a></td><td><a href="#bib_specifyingPreferredCitation">bib:specifyingPreferredCitation</a></td></tr>
+<tr><td><a href="#bf_Topic">bf:Topic</a></td><td><a href="#bib_summarizing">bib:summarizing</a></td></tr>
+<tr><td><a href="#bf_VariantTitle">bf:VariantTitle</a></td><td><a href="#dcterms_date">dcterms:date</a></td></tr>
+<tr><td><a href="#bf_WorkTitle">bf:WorkTitle</a></td><td><a href="#dcterms_hasPart">dcterms:hasPart</a></td></tr>
+<tr><td><a href="#bf_absorbed">bf:absorbed</a></td><td><a href="#dcterms_isPartOf">dcterms:isPartOf</a></td></tr>
+<tr><td><a href="#bf_absorbedBy">bf:absorbedBy</a></td><td><a href="#dcterms_language">dcterms:language</a></td></tr>
+<tr><td><a href="#bf_acquisitionSource">bf:acquisitionSource</a></td><td><a href="#dcterms_subject">dcterms:subject</a></td></tr>
+<tr><td><a href="#bf_acquisitionTerms">bf:acquisitionTerms</a></td><td><a href="#foaf_Agent">foaf:Agent</a></td></tr>
+<tr><td><a href="#bf_agent">bf:agent</a></td><td><a href="#foaf_Organization">foaf:Organization</a></td></tr>
+<tr><td><a href="#bf_barcode">bf:barcode</a></td><td><a href="#foaf_Person">foaf:Person</a></td></tr>
+<tr><td><a href="#bf_capture">bf:capture</a></td><td><a href="#lingvoj_Lingvo">lingvoj:Lingvo</a></td></tr>
+<tr><td><a href="#bf_carrier">bf:carrier</a></td><td><a href="#oa_Annotation">oa:Annotation</a></td></tr>
+<tr><td><a href="#bf_content">bf:content</a></td><td><a href="#oa_motiviedBy">oa:motiviedBy</a></td></tr>
+<tr><td><a href="#bf_continuedBy">bf:continuedBy</a></td><td><a href="#prov_Location">prov:Location</a></td></tr>
+<tr><td><a href="#bf_continuedInPartBy">bf:continuedInPartBy</a></td><td><a href="#rdau_">rdau:</a></td></tr>
+<tr><td><a href="#bf_continues">bf:continues</a></td><td><a href="#rdau_60120">rdau:60120</a></td></tr>
+<tr><td><a href="#bf_continuesInPart">bf:continuesInPart</a></td><td><a href="#rdau_60305">rdau:60305</a></td></tr>
+<tr><td><a href="#bf_contribution">bf:contribution</a></td><td><a href="#rdau_60504">rdau:60504</a></td></tr>
+<tr><td><a href="#bf_contributor">bf:contributor</a></td><td><a href="#rdau_60505">rdau:60505</a></td></tr>
+<tr><td><a href="#bf_copyrightDate">bf:copyrightDate</a></td><td><a href="#rdau_P60102">rdau:P60102</a></td></tr>
+<tr><td><a href="#bf_coverArt">bf:coverArt</a></td><td><a href="#rdau_P60104">rdau:P60104</a></td></tr>
+<tr><td><a href="#bf_credits">bf:credits</a></td><td><a href="#rdau_P60191">rdau:P60191</a></td></tr>
+<tr><td><a href="#bf_custodialHistory">bf:custodialHistory</a></td><td><a href="#rdau_P60199">rdau:P60199</a></td></tr>
+<tr><td><a href="#bf_date">bf:date</a></td><td><a href="#rdau_P60244">rdau:P60244</a></td></tr>
+<tr><td><a href="#bf_derivativeOf">bf:derivativeOf</a></td><td><a href="#rdau_P60247">rdau:P60247</a></td></tr>
+<tr><td><a href="#bf_eventContent">bf:eventContent</a></td><td><a href="#rdau_P60250">rdau:P60250</a></td></tr>
+<tr><td><a href="#bf_eventContentOf">bf:eventContentOf</a></td><td><a href="#rdau_P60261">rdau:P60261</a></td></tr>
+<tr><td><a href="#bf_geographicCoverage">bf:geographicCoverage</a></td><td><a href="#rdau_P60272">rdau:P60272</a></td></tr>
+<tr><td><a href="#bf_grantingInstitution">bf:grantingInstitution</a></td><td><a href="#rdau_P60277">rdau:P60277</a></td></tr>
+<tr><td><a href="#bf_hasDerivative">bf:hasDerivative</a></td><td><a href="#rdau_P60278">rdau:P60278</a></td></tr>
+<tr><td><a href="#bf_hasEquivalent">bf:hasEquivalent</a></td><td><a href="#rdau_P60280">rdau:P60280</a></td></tr>
+<tr><td><a href="#bf_hasPart">bf:hasPart</a></td><td><a href="#rdau_P60297">rdau:P60297</a></td></tr>
+<tr><td><a href="#bf_hasReproduction">bf:hasReproduction</a></td><td><a href="#rdau_P60305">rdau:P60305</a></td></tr>
+<tr><td><a href="#bf_heldBy">bf:heldBy</a></td><td><a href="#rdau_P60306">rdau:P60306</a></td></tr>
+<tr><td><a href="#bf_historyOfWork">bf:historyOfWork</a></td><td><a href="#rdau_P60503">rdau:P60503</a></td></tr>
+<tr><td><a href="#bf_immediateAcquisition">bf:immediateAcquisition</a></td><td><a href="#rdau_P60574">rdau:P60574</a></td></tr>
+<tr><td><a href="#bf_language">bf:language</a></td><td><a href="#schema_Event">schema:Event</a></td></tr>
+<tr><td><a href="#bf_legalDate">bf:legalDate</a></td><td><a href="#vivo_rank">vivo:rank</a></td></tr>
+<tr><td><a href="#bf_mainTitle">bf:mainTitle</a></td><td></td></tr>
+<tr><td><a href="#bf_media">bf:media</a></td><td></td></tr>
+<tr><td><a href="#bf_mergedToForm">bf:mergedToForm</a></td><td></td></tr>
+<tr><td><a href="#bf_mergerOf">bf:mergerOf</a></td><td></td></tr>
+<tr><td><a href="#bf_natureOfContent">bf:natureOfContent</a></td><td></td></tr>
+<tr><td><a href="#bf_note">bf:note</a></td><td></td></tr>
+<tr><td><a href="#bf_noteType">bf:noteType</a></td><td></td></tr>
+<tr><td><a href="#bf_originDate">bf:originDate</a></td><td></td></tr>
+<tr><td><a href="#bf_originPlace">bf:originPlace</a></td><td></td></tr>
+<tr><td><a href="#bf_originalVersion">bf:originalVersion</a></td><td></td></tr>
+<tr><td><a href="#bf_originalVersionOf">bf:originalVersionOf</a></td><td></td></tr>
+<tr><td><a href="#bf_otherPhysicalFormat">bf:otherPhysicalFormat</a></td><td></td></tr>
+<tr><td><a href="#bf_part">bf:part</a></td><td></td></tr>
+<tr><td><a href="#bf_partName">bf:partName</a></td><td></td></tr>
+<tr><td><a href="#bf_partNumber">bf:partNumber</a></td><td></td></tr>
+<tr><td><a href="#bf_partOf">bf:partOf</a></td><td></td></tr>
+<tr><td><a href="#bf_physicalLocation">bf:physicalLocation</a></td><td></td></tr>
+<tr><td><a href="#bf_place">bf:place</a></td><td></td></tr>
+<tr><td><a href="#bf_precededBy">bf:precededBy</a></td><td></td></tr>
+<tr><td><a href="#bf_preferredCitation">bf:preferredCitation</a></td><td></td></tr>
+<tr><td><a href="#bf_provisionActivity">bf:provisionActivity</a></td><td></td></tr>
+<tr><td><a href="#bf_provisionActivityStatement">bf:provisionActivityStatement</a></td><td></td></tr>
+<tr><td><a href="#bf_qualifier">bf:qualifier</a></td><td></td></tr>
+<tr><td><a href="#bf_replacedBy">bf:replacedBy</a></td><td></td></tr>
+<tr><td><a href="#bf_replacementOf">bf:replacementOf</a></td><td></td></tr>
+<tr><td><a href="#bf_reproductionOf">bf:reproductionOf</a></td><td></td></tr>
+<tr><td><a href="#bf_review">bf:review</a></td><td></td></tr>
+<tr><td><a href="#bf_role">bf:role</a></td><td></td></tr>
+<tr><td><a href="#bf_separatedFrom">bf:separatedFrom</a></td><td></td></tr>
+<tr><td><a href="#bf_shelfMark">bf:shelfMark</a></td><td></td></tr>
+<tr><td><a href="#bf_source">bf:source</a></td><td></td></tr>
+<tr><td><a href="#bf_splitInto">bf:splitInto</a></td><td></td></tr>
+<tr><td><a href="#bf_subject">bf:subject</a></td><td></td></tr>
+<tr><td><a href="#bf_subtitle">bf:subtitle</a></td><td></td></tr>
+<tr><td><a href="#bf_succeededBy">bf:succeededBy</a></td><td></td></tr>
+<tr><td><a href="#bf_summary">bf:summary</a></td><td></td></tr>
+<tr><td><a href="#bf_tableOfContents">bf:tableOfContents</a></td><td></td></tr>
+<tr><td><a href="#bf_temporalCoverage">bf:temporalCoverage</a></td><td></td></tr>
+<tr><td><a href="#bf_translation">bf:translation</a></td><td></td></tr>
+<tr><td><a href="#bf_translationOf">bf:translationOf</a></td><td></td></tr>
+<tr><td><a href="#bf_variantType">bf:variantType</a></td><td></td></tr>
+<tr><td><a href="#bf_version">bf:version</a></td><td></td></tr>
+</table>\m
+<h2>Mappings by term involved</h2>
+
+<h3 id="bf_AbbreviatedTitle">bf:AbbreviatedTitle</h3>
+
+<h3 id="bf_AcquisitionSource">bf:AcquisitionSource</h3>
+
+<h3 id="bf_Agent">bf:Agent</h3>
+
+<h3 id="bf_Capture">bf:Capture</h3>
+
+<h3 id="bf_Carrier">bf:Carrier</h3>
+
+<h3 id="bf_CollectiveTitle">bf:CollectiveTitle</h3>
+
+<h3 id="bf_Content">bf:Content</h3>
+
+<h3 id="bf_Contribution">bf:Contribution</h3>
+
+<h3 id="bf_CoverArt">bf:CoverArt</h3>
+
+<h3 id="bf_Distribution">bf:Distribution</h3>
+
+<h3 id="bf_Event">bf:Event</h3>
+
+<h3 id="bf_GeographicCoverage">bf:GeographicCoverage</h3>
+
+<h3 id="bf_ImmediateAcquisition">bf:ImmediateAcquisition</h3>
+
+<h3 id="bf_InstanceTitle">bf:InstanceTitle</h3>
+
+<h3 id="bf_KeyTitle">bf:KeyTitle</h3>
+
+<h3 id="bf_Language">bf:Language</h3>
+
+<h3 id="bf_Manufacture">bf:Manufacture</h3>
+
+<h3 id="bf_Media">bf:Media</h3>
+
+<h3 id="bf_Meeting">bf:Meeting</h3>
+
+<h3 id="bf_Multimedia">bf:Multimedia</h3>
+
+<h3 id="bf_Note">bf:Note</h3>
+
+<h3 id="bf_Organization">bf:Organization</h3>
+
+<h3 id="bf_ParallelTitle">bf:ParallelTitle</h3>
+
+<h3 id="bf_Person">bf:Person</h3>
+
+<h3 id="bf_Place">bf:Place</h3>
+
+<h3 id="bf_Production">bf:Production</h3>
+
+<h3 id="bf_ProvisionActivity">bf:ProvisionActivity</h3>
+
+<h3 id="bf_Publication">bf:Publication</h3>
+
+<h3 id="bf_Review">bf:Review</h3>
+
+<h3 id="bf_Role">bf:Role</h3>
+
+<h3 id="bf_Source">bf:Source</h3>
+
+<h3 id="bf_Summary">bf:Summary</h3>
+
+<h3 id="bf_TableOfContents">bf:TableOfContents</h3>
+
+<h3 id="bf_Tactile">bf:Tactile</h3>
+
+<h3 id="bf_Topic">bf:Topic</h3>
+
+<h3 id="bf_VariantTitle">bf:VariantTitle</h3>
+
+<h3 id="bf_WorkTitle">bf:WorkTitle</h3>
+
+<h3 id="bf_absorbed">bf:absorbed</h3>
+
+<h3 id="bf_absorbedBy">bf:absorbedBy</h3>
+
+<h3 id="bf_acquisitionSource">bf:acquisitionSource</h3>
+
+<h3 id="bf_acquisitionTerms">bf:acquisitionTerms</h3>
+
+<h3 id="bf_agent">bf:agent</h3>
+
+<h3 id="bf_barcode">bf:barcode</h3>
+
+<h3 id="bf_capture">bf:capture</h3>
+
+<h3 id="bf_carrier">bf:carrier</h3>
+
+<h3 id="bf_content">bf:content</h3>
+
+<h3 id="bf_continuedBy">bf:continuedBy</h3>
+
+<h3 id="bf_continuedInPartBy">bf:continuedInPartBy</h3>
+
+<h3 id="bf_continues">bf:continues</h3>
+
+<h3 id="bf_continuesInPart">bf:continuesInPart</h3>
+
+<h3 id="bf_contribution">bf:contribution</h3>
+
+<h3 id="bf_contributor">bf:contributor</h3>
+
+<h3 id="bf_copyrightDate">bf:copyrightDate</h3>
+
+<h3 id="bf_coverArt">bf:coverArt</h3>
+
+<h3 id="bf_credits">bf:credits</h3>
+
+<table>
+<th><td>BIBFRAME</td><td>Bibliotek-o equivalent</td></th>
+<tr>
+<td><pre><http://example.org/obj1> <http://bibliotek-o.org/ontology/listingCredits> "Credit" .
+</pre></td>
+<td><pre><http://example.org/obj1> <http://id.loc.gov/ontologies/bibframe/credits> "Credit" .
+</pre></td>
+</tr>
+</table>\m
+<h3 id="bf_custodialHistory">bf:custodialHistory</h3>
+
+<h3 id="bf_date">bf:date</h3>
+
+<h3 id="bf_derivativeOf">bf:derivativeOf</h3>
+
+<h3 id="bf_eventContent">bf:eventContent</h3>
+
+<h3 id="bf_eventContentOf">bf:eventContentOf</h3>
+
+<h3 id="bf_geographicCoverage">bf:geographicCoverage</h3>
+
+<h3 id="bf_grantingInstitution">bf:grantingInstitution</h3>
+
+<h3 id="bf_hasDerivative">bf:hasDerivative</h3>
+
+<h3 id="bf_hasEquivalent">bf:hasEquivalent</h3>
+
+<h3 id="bf_hasPart">bf:hasPart</h3>
+
+<h3 id="bf_hasReproduction">bf:hasReproduction</h3>
+
+<h3 id="bf_heldBy">bf:heldBy</h3>
+
+<h3 id="bf_historyOfWork">bf:historyOfWork</h3>
+
+<h3 id="bf_immediateAcquisition">bf:immediateAcquisition</h3>
+
+<h3 id="bf_language">bf:language</h3>
+
+<h3 id="bf_legalDate">bf:legalDate</h3>
+
+<h3 id="bf_mainTitle">bf:mainTitle</h3>
+
+<h3 id="bf_media">bf:media</h3>
+
+<h3 id="bf_mergedToForm">bf:mergedToForm</h3>
+
+<h3 id="bf_mergerOf">bf:mergerOf</h3>
+
+<h3 id="bf_natureOfContent">bf:natureOfContent</h3>
+
+<h3 id="bf_note">bf:note</h3>
+
+<h3 id="bf_noteType">bf:noteType</h3>
+
+<h3 id="bf_originDate">bf:originDate</h3>
+
+<h3 id="bf_originPlace">bf:originPlace</h3>
+
+<h3 id="bf_originalVersion">bf:originalVersion</h3>
+
+<h3 id="bf_originalVersionOf">bf:originalVersionOf</h3>
+
+<h3 id="bf_otherPhysicalFormat">bf:otherPhysicalFormat</h3>
+
+<h3 id="bf_part">bf:part</h3>
+
+<h3 id="bf_partName">bf:partName</h3>
+
+<h3 id="bf_partNumber">bf:partNumber</h3>
+
+<h3 id="bf_partOf">bf:partOf</h3>
+
+<h3 id="bf_physicalLocation">bf:physicalLocation</h3>
+
+<h3 id="bf_place">bf:place</h3>
+
+<h3 id="bf_precededBy">bf:precededBy</h3>
+
+<h3 id="bf_preferredCitation">bf:preferredCitation</h3>
+
+<h3 id="bf_provisionActivity">bf:provisionActivity</h3>
+
+<h3 id="bf_provisionActivityStatement">bf:provisionActivityStatement</h3>
+
+<h3 id="bf_qualifier">bf:qualifier</h3>
+
+<h3 id="bf_replacedBy">bf:replacedBy</h3>
+
+<h3 id="bf_replacementOf">bf:replacementOf</h3>
+
+<h3 id="bf_reproductionOf">bf:reproductionOf</h3>
+
+<h3 id="bf_review">bf:review</h3>
+
+<h3 id="bf_role">bf:role</h3>
+
+<h3 id="bf_separatedFrom">bf:separatedFrom</h3>
+
+<h3 id="bf_shelfMark">bf:shelfMark</h3>
+
+<h3 id="bf_source">bf:source</h3>
+
+<h3 id="bf_splitInto">bf:splitInto</h3>
+
+<h3 id="bf_subject">bf:subject</h3>
+
+<h3 id="bf_subtitle">bf:subtitle</h3>
+
+<h3 id="bf_succeededBy">bf:succeededBy</h3>
+
+<h3 id="bf_summary">bf:summary</h3>
+
+<h3 id="bf_tableOfContents">bf:tableOfContents</h3>
+
+<h3 id="bf_temporalCoverage">bf:temporalCoverage</h3>
+
+<h3 id="bf_translation">bf:translation</h3>
+
+<h3 id="bf_translationOf">bf:translationOf</h3>
+
+<h3 id="bf_variantType">bf:variantType</h3>
+
+<h3 id="bf_version">bf:version</h3>
+
