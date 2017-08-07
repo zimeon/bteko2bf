@@ -20,14 +20,13 @@ class TestAll(unittest.TestCase):
     start_fuseki = True
     new_for_each_test = False
 
-
     def sparql_update(self, in_filename, ru_filename, out_filename):
         """Run SPARQL update ru_filenqme on in_filename to write out_filename."""
         with open(out_filename, 'wb') as fh:
             run(['update', '--dump',
                  '--data=' + in_filename,
                  '--update=' + ru_filename],
-                 stdout=fh, check=True)
+                stdout=fh, check=True)
 
     def test01_testdata(self):
         """Check all pairs in testdata/ dir."""
